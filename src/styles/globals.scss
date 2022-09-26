@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  /* @apply text-white bg-gray-600 */
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid-Sans", "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  @apply text-white bg-gray-700;
+
+  .page-container {
+    @apply px-4;
+  }
+
+  input {
+    @apply text-gray-800;
+  }
+
+  .btn-primary {
+    @apply flex justify-center rounded-sm border 
+            border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium hover:bg-indigo-700 
+            focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 text-white;
+
+    &:disabled {
+      @apply bg-indigo-300 focus:bg-indigo-300 hover:bg-indigo-300;
+    }
+  }
+}
